@@ -19,7 +19,7 @@ them, review redacted findings, and export the report.
 ## Surprises & Discoveries
 
 - The dedicated Wavect SSH public key was already registered, so GitHub login completed despite the duplicate-key upload response.
-- `npm pack --dry-run` reached a root-owned global npm cache and could not complete without changing user-level permissions. The repository's package export test and deterministic extension package checks passed without using that cache.
+- `npm pack --dry-run` initially reached a root-owned global npm cache. A later retry completed without changing permissions and listed the expected eight package files; the package export test and deterministic extension package checks also passed.
 - The in-app Chrome client was unavailable during final QA. The unpacked-extension interaction matrix remains an explicit owner gate rather than an inferred pass.
 
 ## Decision Log
@@ -83,6 +83,7 @@ Never delete or recreate the public repository to recover from a release error.
 - Homepage: `https://wavect.io/tools/mcp-install-risk-scanner/`
 - Source repository: `https://github.com/wavect/mcp-install-risk-scanner`
 - Release: `https://github.com/wavect/mcp-install-risk-scanner/releases/tag/v0.1.0`
+- Pull request: `https://github.com/wavect/mcp-install-risk-scanner/pull/1`
 - Automated result: 25 tests passed; source policy passed for 14 rules.
 - Deterministic ZIP SHA-256: `e82dd4057e63cc082758bbc448eb9ade651623bda9d6c40adf007ae6fc7296a1`.
 - Release commit: `03dfc14987f97909f89ac839179553ea77b8de87`.

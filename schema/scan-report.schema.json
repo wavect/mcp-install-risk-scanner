@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/wavect/mcp-install-risk-scanner/blob/v0.1.0/schema/scan-report.schema.json",
+  "$id": "https://github.com/wavect/mcp-install-risk-scanner/blob/v0.1.1/schema/scan-report.schema.json",
   "title": "MCP Install Risk Scanner report",
   "type": "object",
   "additionalProperties": false,

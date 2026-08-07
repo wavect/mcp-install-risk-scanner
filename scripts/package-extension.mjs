@@ -7,8 +7,6 @@ import { buildExtension } from './build-extension.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const DEFAULT_OUTPUT = path.join(ROOT, 'dist')
-const ZIP_NAME = 'mcp-install-risk-scanner-chrome-v0.1.0.zip'
-
 async function fileList(directory, prefix = '') {
   const entries = await readdir(path.join(directory, prefix), { withFileTypes: true })
   const files = []
@@ -24,8 +22,10 @@ export async function createPackage(outputDirectory = DEFAULT_OUTPUT) {
   const output = path.resolve(outputDirectory)
   if (output === '/' || output === ROOT || output.length < 12) throw new Error(`Unsafe package output: ${output}`)
   await mkdir(output, { recursive: true })
+  const packageJson = JSON.parse(await readFile(path.join(ROOT, 'package.json'), 'utf8'))
+  const zipName = `mcp-install-risk-scanner-chrome-v${packageJson.version}.zip`
   const extension = path.join(output, 'extension')
-  const zipPath = path.join(output, ZIP_NAME)
+  const zipPath = path.join(output, zipName)
   await buildExtension(extension)
   await rm(zipPath, { force: true })
   const files = await fileList(extension)
@@ -33,7 +33,7 @@ export async function createPackage(outputDirectory = DEFAULT_OUTPUT) {
   if (zip.status !== 0) throw new Error(`zip failed: ${zip.stderr || zip.stdout}`)
   const digest = createHash('sha256').update(await readFile(zipPath)).digest('hex')
   const checksumPath = `${zipPath}.sha256`
-  await writeFile(checksumPath, `${digest}  ${ZIP_NAME}\n`)
+  await writeFile(checksumPath, `${digest}  ${zipName}\n`)
   return { zipPath, checksumPath, digest }
 }
 

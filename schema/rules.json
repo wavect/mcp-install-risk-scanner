@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "scannerVersion": "0.1.0",
+  "scannerVersion": "0.1.1",
   "rules": [
     { "id": "MCP001", "severity": "critical", "category": "command-execution", "title": "Piped download execution" },
     { "id": "MCP002", "severity": "high", "category": "command-execution", "title": "General-purpose shell wrapper" },

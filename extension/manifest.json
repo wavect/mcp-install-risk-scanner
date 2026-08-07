@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MCP Install Risk Scanner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Review MCP install commands and config for risky patterns before you run them.",
   "permissions": ["activeTab", "scripting", "contextMenus"],
   "action": {
