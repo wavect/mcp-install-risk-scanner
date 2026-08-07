@@ -1,7 +1,7 @@
 import { redactEvidence } from './redact.js'
 import { RULES, RULE_CATALOG } from './rules.js'
 
-export const SCANNER_VERSION = '0.1.0'
+export const SCANNER_VERSION = '0.1.1'
 export const SCHEMA_VERSION = '1.0.0'
 export const MAX_INPUT_LENGTH = 100_000
 

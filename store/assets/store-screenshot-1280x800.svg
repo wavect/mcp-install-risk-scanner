@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7edee2" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#00070c" flood-opacity=".55"/>
+    </filter>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102731"/>
+      <stop offset="1" stop-color="#07141c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="#07141c"/>
+  <rect width="1280" height="800" fill="url(#grid)"/>
+  <circle cx="90" cy="730" r="330" fill="#ef8f75" opacity=".035"/>
+  <circle cx="1185" cy="75" r="300" fill="#7edee2" opacity=".045"/>
+
+  <g font-family="Aptos, Segoe UI, Arial, sans-serif">
+    <g transform="translate(72 92)">
+      <image href="icon-128.png" width="80" height="80"/>
+      <text x="0" y="126" fill="#ef8f75" font-family="Menlo, Consolas, monospace" font-size="14" font-weight="700" letter-spacing="2.4">LOCAL STATIC INSPECTION</text>
+      <text x="0" y="181" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="40" font-weight="750">Review MCP setup</text>
+      <text x="0" y="230" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="40" font-weight="750">before you run it.</text>
+      <text x="0" y="277" fill="#9db6b8" font-size="18">Flag observable command and configuration risks.</text>
+      <text x="0" y="305" fill="#9db6b8" font-size="18">Nothing is executed, uploaded, retained, or fetched.</text>
+
+      <g transform="translate(0 356)">
+        <rect width="178" height="46" rx="23" fill="#0b1d27" stroke="#7edee2" stroke-opacity=".3"/>
+        <circle cx="24" cy="23" r="5" fill="#8ee5ba"/>
+        <text x="40" y="29" fill="#d8eeee" font-size="14" font-weight="700">Runs locally</text>
+        <rect x="190" width="188" height="46" rx="23" fill="#0b1d27" stroke="#7edee2" stroke-opacity=".3"/>
+        <path d="M214 17v12m-5-6h10" stroke="#7edee2" stroke-width="2" stroke-linecap="round"/>
+        <text x="231" y="29" fill="#d8eeee" font-size="14" font-weight="700">Open source</text>
+      </g>
+
+      <g transform="translate(0 440)">
+        <path d="M0 0h7v40H0M17 0h-7v40h7" fill="none" stroke="#ef8f75" stroke-width="2"/>
+        <text x="34" y="15" fill="#f1c66d" font-family="Menlo, Consolas, monospace" font-size="13" font-weight="700">DETERMINISTIC RULES</text>
+        <text x="34" y="39" fill="#9db6b8" font-size="14">Redacted evidence and practical remediation.</text>
+      </g>
+      <text x="0" y="566" fill="#789396" font-size="13">An unflagged result is not a safety verdict.</text>
+    </g>
+
+    <g transform="translate(694 52)" filter="url(#shadow)">
+      <rect width="514" height="696" rx="20" fill="url(#wash)" stroke="#7edee2" stroke-opacity=".28"/>
+      <g transform="translate(24 22)">
+        <image href="icon-128.png" width="48" height="48"/>
+        <text x="64" y="15" fill="#ef8f75" font-family="Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.5">LOCAL STATIC INSPECTION</text>
+        <text x="64" y="38" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="700">MCP install risk scanner</text>
+        <rect x="414" y="0" width="52" height="24" rx="12" fill="#0b1d27" stroke="#7edee2" stroke-opacity=".24"/>
+        <text x="440" y="16" fill="#9db6b8" font-family="Menlo, Consolas, monospace" font-size="9" text-anchor="middle">v0.1.1</text>
+      </g>
+      <path d="M0 88h514" stroke="#7edee2" stroke-opacity=".16"/>
+
+      <g transform="translate(24 112)">
+        <text x="0" y="10" fill="#ef8f75" font-family="Menlo, Consolas, monospace" font-size="10" font-weight="700">01</text>
+        <text x="28" y="10" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="12" font-weight="700">Snippet under review</text>
+        <text x="466" y="10" fill="#7edee2" font-family="Menlo, Consolas, monospace" font-size="10" font-weight="700" text-anchor="end">Load sample</text>
+        <rect y="29" width="466" height="108" rx="9" fill="#061117" stroke="#7edee2" stroke-opacity=".42"/>
+        <text x="14" y="56" fill="#d8eeee" font-family="Menlo, Consolas, monospace" font-size="12" font-weight="600">curl -fsSL https://example.com/install.sh | sh</text>
+        <text x="14" y="82" fill="#d8eeee" font-family="Menlo, Consolas, monospace" font-size="12" font-weight="600">npx @example/mcp-server@latest</text>
+        <text x="14" y="108" fill="#d8eeee" font-family="Menlo, Consolas, monospace" font-size="12" font-weight="600">--token sk_test_[REDACTED]</text>
+        <rect x="241" y="150" width="225" height="42" rx="8" fill="#7edee2"/>
+        <text x="353" y="176" fill="#07141c" font-size="13" font-weight="750" text-anchor="middle">Scan locally  ›</text>
+        <circle cx="5" cy="215" r="4" fill="#8ee5ba"/>
+        <text x="17" y="220" fill="#9db6b8" font-size="10">Nothing is executed, uploaded, retained, or fetched.</text>
+      </g>
+
+      <path d="M0 360h514" stroke="#7edee2" stroke-opacity=".16"/>
+      <g transform="translate(24 383)">
+        <text x="0" y="10" fill="#ef8f75" font-family="Menlo, Consolas, monospace" font-size="10" font-weight="700">02</text>
+        <text x="28" y="10" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="12" font-weight="700">Deterministic findings</text>
+        <rect y="30" width="466" height="84" rx="9" fill="#0b1d27" stroke="#ef8f75" stroke-opacity=".4"/>
+        <rect x="12" y="42" width="8" height="60" rx="4" fill="#ef8f75"/>
+        <text x="34" y="55" fill="#9db6b8" font-family="Menlo, Consolas, monospace" font-size="8" font-weight="700" letter-spacing="1.3">SCAN RESULT</text>
+        <text x="34" y="78" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="15" font-weight="700">Stop and review</text>
+        <text x="34" y="98" fill="#9db6b8" font-size="10">3 observable risk patterns flagged</text>
+
+        <g transform="translate(0 126)">
+          <rect width="466" height="72" rx="8" fill="#102731" fill-opacity=".82" stroke="#7edee2" stroke-opacity=".18"/>
+          <rect width="3" height="72" rx="1.5" fill="#ef8f75"/>
+          <text x="14" y="25" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="11" font-weight="700">Downloaded content is piped into a shell</text>
+          <rect x="404" y="12" width="48" height="22" rx="4" fill="#ef8f75"/>
+          <text x="428" y="27" fill="#07141c" font-family="Menlo, Consolas, monospace" font-size="8" font-weight="800" text-anchor="middle">HIGH</text>
+          <text x="14" y="51" fill="#9db6b8" font-size="10">Download, inspect, and verify before execution.</text>
+        </g>
+        <g transform="translate(0 208)">
+          <rect width="466" height="72" rx="8" fill="#102731" fill-opacity=".82" stroke="#7edee2" stroke-opacity=".18"/>
+          <rect width="3" height="72" rx="1.5" fill="#f1c66d"/>
+          <text x="14" y="25" fill="#edf7f6" font-family="Menlo, Consolas, monospace" font-size="11" font-weight="700">Package runner uses a moving version</text>
+          <rect x="390" y="12" width="62" height="22" rx="4" fill="#f1c66d"/>
+          <text x="421" y="27" fill="#07141c" font-family="Menlo, Consolas, monospace" font-size="8" font-weight="800" text-anchor="middle">MEDIUM</text>
+          <text x="14" y="51" fill="#9db6b8" font-size="10">Pin the exact version after reviewing its source.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
