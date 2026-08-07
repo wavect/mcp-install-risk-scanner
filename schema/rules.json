@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "scannerVersion": "0.1.0",
+  "rules": [
+    { "id": "MCP001", "severity": "critical", "category": "command-execution", "title": "Piped download execution" },
+    { "id": "MCP002", "severity": "high", "category": "command-execution", "title": "General-purpose shell wrapper" },
+    { "id": "MCP003", "severity": "critical", "category": "privilege", "title": "Elevated privileges" },
+    { "id": "MCP004", "severity": "critical", "category": "filesystem", "title": "Recursive or forced deletion" },
+    { "id": "MCP005", "severity": "high", "category": "privilege", "title": "Weakened security boundary" },
+    { "id": "MCP006", "severity": "high", "category": "filesystem", "title": "Sensitive host path" },
+    { "id": "MCP007", "severity": "high", "category": "secrets", "title": "Inline credential" },
+    { "id": "MCP008", "severity": "medium", "category": "supply-chain", "title": "Unpinned package runner" },
+    { "id": "MCP009", "severity": "medium", "category": "supply-chain", "title": "Moving Git reference" },
+    { "id": "MCP010", "severity": "medium", "category": "supply-chain", "title": "Floating container image" },
+    { "id": "MCP011", "severity": "high", "category": "network", "title": "Insecure or internal endpoint" },
+    { "id": "MCP012", "severity": "medium", "category": "environment", "title": "Broad environment inheritance" },
+    { "id": "MCP013", "severity": "critical", "category": "container", "title": "Privileged container or host mount" },
+    { "id": "MCP014", "severity": "high", "category": "network", "title": "Host network access" }
+  ]
+}

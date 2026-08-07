@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Install Risk Scanner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="scanner-shell">
+    <header class="masthead">
+      <div class="brand-mark" aria-hidden="true"><span>&gt;</span><i></i></div>
+      <div>
+        <p class="eyebrow">LOCAL STATIC INSPECTION</p>
+        <h1>MCP install risk scanner</h1>
+      </div>
+      <span class="version">v0.1.0</span>
+    </header>
+
+    <section class="input-panel" aria-labelledby="input-title">
+      <div class="section-heading">
+        <div><span>01</span><h2 id="input-title">Snippet under review</h2></div>
+        <button type="button" class="text-button" data-action="load-sample">Load sample</button>
+      </div>
+      <label class="sr-only" for="scanner-input">MCP install command or configuration</label>
+      <textarea id="scanner-input" spellcheck="false" maxlength="100000" placeholder="Paste an npx, uvx, Docker, PowerShell, shell, or MCP JSON snippet"></textarea>
+      <div class="input-actions">
+        <button type="button" class="secondary-button" data-action="read-page">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>
+          Read this page
+        </button>
+        <button type="button" class="primary-button" data-action="scan">
+          Scan locally
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+      <p class="privacy-line"><span></span>Nothing is executed, uploaded, retained, or fetched.</p>
+      <p class="error-message" role="alert" hidden></p>
+    </section>
+
+    <section class="results-panel" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div><span>02</span><h2 id="results-title">Deterministic findings</h2></div>
+        <div class="export-actions" hidden>
+          <button type="button" class="icon-button" data-action="export-json">JSON</button>
+          <button type="button" class="icon-button" data-action="export-markdown">Markdown</button>
+        </div>
+      </div>
+      <div class="empty-state" data-empty>
+        <div class="scan-reticle" aria-hidden="true"><i></i></div>
+        <p>Paste a setup snippet or read visible code from the current page.</p>
+        <small>An unflagged result is not a safety verdict.</small>
+      </div>
+      <div class="summary-card" data-summary hidden aria-live="polite">
+        <span class="summary-signal" aria-hidden="true"></span>
+        <div><small>SCAN RESULT</small><strong data-summary-label></strong><p data-summary-detail></p></div>
+      </div>
+      <div class="finding-list" data-findings></div>
+    </section>
+
+    <footer>
+      <a href="https://wavect.io/tools/mcp-install-risk-scanner/" target="_blank" rel="noopener noreferrer">Web scanner and methodology</a>
+      <a href="https://github.com/wavect/mcp-install-risk-scanner" target="_blank" rel="noopener noreferrer">Source and rules</a>
+    </footer>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

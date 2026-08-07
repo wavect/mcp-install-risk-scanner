@@ -1,0 +1,35 @@
+{
+  "name": "@wavect/mcp-install-risk-core",
+  "version": "0.1.0",
+  "description": "Deterministic local-only risk scanner for MCP install commands and configuration snippets",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "homepage": "https://wavect.io/tools/mcp-install-risk-scanner/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavect/mcp-install-risk-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wavect/mcp-install-risk-scanner/issues"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./rules": "./src/rules.js"
+  },
+  "files": [
+    "src/",
+    "schema/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check-source.mjs",
+    "build": "node scripts/build-extension.mjs",
+    "package": "node scripts/package-extension.mjs",
+    "verify:package": "node scripts/verify-package.mjs"
+  }
+}

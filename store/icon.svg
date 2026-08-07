@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Install Risk Scanner icon</title>
+  <desc id="desc">A coral inspection bracket surrounding a teal command cursor on dark blue</desc>
+  <rect width="128" height="128" rx="28" fill="#07141c"/>
+  <path d="M35 26H23v76h12M93 26h12v76H93" fill="none" stroke="#ef8f75" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m47 48 17 16-17 16M70 82h19" fill="none" stroke="#7edee2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
