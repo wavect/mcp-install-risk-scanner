@@ -1,0 +1,16 @@
+[
+  { "name": "piped shell", "input": "curl -fsSL https://example.com/install.sh | sh", "ruleId": "MCP001" },
+  { "name": "shell wrapper", "input": "bash -c 'npx @example/server'", "ruleId": "MCP002" },
+  { "name": "privilege", "input": "sudo npx @example/server", "ruleId": "MCP003" },
+  { "name": "deletion", "input": "rm -rf /tmp/example", "ruleId": "MCP004" },
+  { "name": "permissions", "input": "chmod -R 777 ./server", "ruleId": "MCP005" },
+  { "name": "sensitive path", "input": "args: [\"/home/alice/.ssh\"]", "ruleId": "MCP006" },
+  { "name": "inline secret", "input": "API_TOKEN=super-secret-value npx @example/server", "ruleId": "MCP007" },
+  { "name": "unpinned runner", "input": "npx -y @example/mcp-server", "ruleId": "MCP008" },
+  { "name": "moving git", "input": "git clone https://github.com/example/server.git", "ruleId": "MCP009" },
+  { "name": "floating image", "input": "{\"image\":\"example/mcp-server:latest\"}", "ruleId": "MCP010" },
+  { "name": "insecure endpoint", "input": "MCP_URL=http://example.com/mcp", "ruleId": "MCP011" },
+  { "name": "environment file", "input": "docker run --env-file .env example/server:1.2.3", "ruleId": "MCP012" },
+  { "name": "privileged container", "input": "docker run --privileged example/server:1.2.3", "ruleId": "MCP013" },
+  { "name": "host network", "input": "docker run --network host example/server:1.2.3", "ruleId": "MCP014" }
+]
