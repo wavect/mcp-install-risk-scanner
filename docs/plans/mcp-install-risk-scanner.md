@@ -12,11 +12,15 @@ them, review redacted findings, and export the report.
 - [x] 2026-08-07: Public repository and isolated implementation branch created.
 - [x] 2026-08-07: Implemented the versioned scanner API, 14 rules, schema, fixtures, and tests.
 - [x] 2026-08-07: Implemented and validated the Chrome extension and deterministic package.
-- [ ] Publish `v0.1.0`, release ZIP, checksum, and source documentation.
+- [x] 2026-08-07: Published `v0.1.0` with the Chrome ZIP and SHA-256 checksum.
+- [x] 2026-08-07: Pushed the implementation branch for ready-for-review handoff.
+- [ ] Owner gate: load the unpacked build in Chrome, complete the manual interaction matrix, and submit to the Chrome Web Store.
 
 ## Surprises & Discoveries
 
 - The dedicated Wavect SSH public key was already registered, so GitHub login completed despite the duplicate-key upload response.
+- `npm pack --dry-run` reached a root-owned global npm cache and could not complete without changing user-level permissions. The repository's package export test and deterministic extension package checks passed without using that cache.
+- The in-app Chrome client was unavailable during final QA. The unpacked-extension interaction matrix remains an explicit owner gate rather than an inferred pass.
 
 ## Decision Log
 
@@ -26,9 +30,10 @@ them, review redacted findings, and export the report.
 
 ## Outcomes & Retrospective
 
-Implementation is in progress. Repository creation is complete; scanner,
-extension, automated validation, and deterministic packaging are complete. The
-tagged GitHub release and manual Chrome interaction checks remain.
+The scanner, extension, automated validation, deterministic packaging, source
+tag, and GitHub release are complete. Release `v0.1.0` contains the Chrome ZIP
+and matching checksum. Manual Chrome interaction checks and Chrome Web Store
+submission remain owner actions because Chrome was unavailable in this session.
 
 ## Context and Orientation
 
@@ -77,8 +82,10 @@ Never delete or recreate the public repository to recover from a release error.
 
 - Homepage: `https://wavect.io/tools/mcp-install-risk-scanner/`
 - Source repository: `https://github.com/wavect/mcp-install-risk-scanner`
+- Release: `https://github.com/wavect/mcp-install-risk-scanner/releases/tag/v0.1.0`
 - Automated result: 25 tests passed; source policy passed for 14 rules.
 - Deterministic ZIP SHA-256: `e82dd4057e63cc082758bbc448eb9ade651623bda9d6c40adf007ae6fc7296a1`.
+- Release commit: `03dfc14987f97909f89ac839179553ea77b8de87`.
 
 ## Interfaces and Dependencies
 
