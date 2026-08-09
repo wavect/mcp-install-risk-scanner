@@ -31,6 +31,7 @@ is not proof that a package or server is safe.
 
 ## URLs
 
+- Chrome Web Store: https://chromewebstore.google.com/detail/mcp-install-risk-scanner/eajfcjpfoolffglacjehgpfomenmiggn
 - Homepage and methodology: https://wavect.io/tools/mcp-install-risk-scanner/
 - Support: https://wavect.io/tools/mcp-install-risk-scanner/#support
 - Source: https://github.com/wavect/mcp-install-risk-scanner

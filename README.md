@@ -7,7 +7,8 @@ environment, and container signals before a user runs the setup.
 
 It powers two interfaces:
 
-- The open-source Manifest V3 Chrome extension in this repository.
+- The [published Manifest V3 Chrome extension](https://chromewebstore.google.com/detail/mcp-install-risk-scanner/eajfcjpfoolffglacjehgpfomenmiggn)
+  built from this repository.
 - The browser scanner and methodology at
   <https://wavect.io/tools/mcp-install-risk-scanner/>.
 
@@ -27,7 +28,12 @@ The public report contract is documented in
 [`schema/scan-report.schema.json`](schema/scan-report.schema.json), and the
 human-readable catalog is available in [`schema/rules.json`](schema/rules.json).
 
-## Load the extension locally
+## Install the extension
+
+Install MCP Install Risk Scanner from the
+[Chrome Web Store](https://chromewebstore.google.com/detail/mcp-install-risk-scanner/eajfcjpfoolffglacjehgpfomenmiggn).
+
+To load the same source locally:
 
 ```bash
 npm install

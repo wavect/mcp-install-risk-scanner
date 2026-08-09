@@ -14,7 +14,8 @@ them, review redacted findings, and export the report.
 - [x] 2026-08-07: Implemented and validated the Chrome extension and deterministic package.
 - [x] 2026-08-07: Published `v0.1.0` with the Chrome ZIP and SHA-256 checksum.
 - [x] 2026-08-07: Pushed the implementation branch for ready-for-review handoff.
-- [ ] Owner gate: load the unpacked build in Chrome, complete the manual interaction matrix, and submit to the Chrome Web Store.
+- [x] 2026-08-07: Published `v0.1.1` with the branded extension assets.
+- [x] 2026-08-09: Chrome Web Store review passed and the extension was published.
 
 ## Surprises & Discoveries
 
@@ -31,9 +32,8 @@ them, review redacted findings, and export the report.
 ## Outcomes & Retrospective
 
 The scanner, extension, automated validation, deterministic packaging, source
-tag, and GitHub release are complete. Release `v0.1.0` contains the Chrome ZIP
-and matching checksum. Manual Chrome interaction checks and Chrome Web Store
-submission remain owner actions because Chrome was unavailable in this session.
+tags, GitHub releases, and Chrome Web Store publication are complete. Release
+`v0.1.1` contains the branded Chrome ZIP and matching checksum.
 
 ## Context and Orientation
 
@@ -81,12 +81,13 @@ Never delete or recreate the public repository to recover from a release error.
 ## Artifacts and Notes
 
 - Homepage: `https://wavect.io/tools/mcp-install-risk-scanner/`
+- Chrome Web Store: `https://chromewebstore.google.com/detail/mcp-install-risk-scanner/eajfcjpfoolffglacjehgpfomenmiggn`
 - Source repository: `https://github.com/wavect/mcp-install-risk-scanner`
-- Release: `https://github.com/wavect/mcp-install-risk-scanner/releases/tag/v0.1.0`
-- Pull request: `https://github.com/wavect/mcp-install-risk-scanner/pull/1`
+- Release: `https://github.com/wavect/mcp-install-risk-scanner/releases/tag/v0.1.1`
+- Pull request: `https://github.com/wavect/mcp-install-risk-scanner/pull/2`
 - Automated result: 25 tests passed; source policy passed for 14 rules.
-- Deterministic ZIP SHA-256: `e82dd4057e63cc082758bbc448eb9ade651623bda9d6c40adf007ae6fc7296a1`.
-- Release commit: `03dfc14987f97909f89ac839179553ea77b8de87`.
+- Deterministic ZIP SHA-256: `0ee06711f1abc147a2f84fb3239c359e37b28719b538cd53d0f6da7f40663c09`.
+- Release commit: `7bc972cdc8903da75463d3f1b3f126eee8702ed9`.
 
 ## Interfaces and Dependencies
 
